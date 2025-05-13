@@ -1,0 +1,60 @@
+-Bảng 'organizations_view':
+    1   organization_id  Khóa Chính	char(36): uuid
+	2	username	varchar(255)
+	4	email Chỉ mục	varchar(255)			
+	5	fullname	varchar(255)			
+	6	address	varchar(255)			
+	7	phone	varchar(255)			
+	8	founded_at	date			
+	9	representative	varchar(255)			
+	10	description	text			
+	11	avatar	varchar(255)			
+	12	cover	varchar(255)			
+	13	website	varchar(255)
+	16	created_at	timestamp
+
+-Bảng 'events_view':
+    1	event_id Chính	char(36)			
+	2	organization_id Chỉ mục	char(36)			
+	3	name	varchar(255)			
+	4	description	text			
+	5	start_date	timestamp
+	6	end_date	timestamp			
+	7	location	varchar(255)			
+	8	min_quantity	int(11)			
+	9	max_quantity	int(11)			
+	10	quantity_now	int(11)			
+	11	status	varchar(255)
+	13	image	varchar(255)			
+	14	created_at	timestamp
+	15	updated_at	timestamp
+
+-Bảng 'top_volunteers_view':
+    1   id Chính	bigint(20)		UNSIGNED	
+	2	volunteer_id Chỉ mục	char(36)
+	3	participation_count	int(11)			
+	4	quarter	int(11)			
+	5	year	int(11)			
+	6	created_at	timestamp
+	7	updated_at	timestamp
+
+-Bảng 'volunteers_view':
+    1	volunteer_id Chính	char(36)			
+	2	username	varchar(255)
+	4	email Chỉ mục	varchar(255)			
+	5	fullname	varchar(255)			
+	6	address	varchar(255)			
+	7	phone	varchar(255)			
+	8	avatar	varchar(255)			
+	9	cover	varchar(255)			
+	10	point	varchar(255)
+	12	created_at	timestamp			
+
+
+-Bảng 'results_view':
+    1	result_id Chính	char(36)				
+	2	event_id Chỉ mục	char(36) foreign key reference events_view(event_id)
+	3	content	text				
+	4	images	text				
+	5	created_at	timestamp
+	6	updated_at	timestamp
