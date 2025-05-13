@@ -191,7 +191,7 @@ def main():
                 return jsonify({'response_text': "Xin lỗi, tôi gặp sự cố khi tạo phản hồi hoặc xử lý kết quả.",
                                 'query_results_data': []})
 
-    app.run(debug=False, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='127.0.0.1', port=5000)
 
 
 if __name__ == '__main__':

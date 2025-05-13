@@ -11,7 +11,6 @@
 	11	avatar	varchar(255)			
 	12	cover	varchar(255)			
 	13	website	varchar(255)
-	16	created_at	timestamp
 
 -Bảng 'events_view':
     1	event_id Chính	char(36)			
@@ -45,8 +44,7 @@
 	5	fullname	varchar(255)			
 	6	address	varchar(255)			
 	7	phone	varchar(255)			
-	8	avatar	varchar(255)			
-	9	cover	varchar(255)			
+	8	avatar	varchar(255)
 	10	point	varchar(255)
 	12	created_at	timestamp			
 
